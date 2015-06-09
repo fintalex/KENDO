@@ -31,25 +31,18 @@
 	                height: 550,
 	                groupable: true,
 	                sortable: true,
+	                filterable: true,
 	                pageable: {
 	                    refresh: true,
 	                    pageSizes: true,
 	                    buttonCount: 5
 	                },
-	                columns: [{
-	                    field: "ContactName",
-	                    title: "Contact Name",
-	                    width: 200
-	                }, {
-	                    field: "ContactTitle",
-	                    title: "Contact Title"
-	                }, {
-	                    field: "CompanyName",
-	                    title: "Company Name"
-	                }, {
-	                    field: "Country",
-	                    width: 150
-	                }]
+	                columns: [
+		                	{ field: "ContactName",  title: "Contact Name", width: 200  },
+		                    { field: "ContactTitle",  title: "Contact Title" }, 
+			                { field: "CompanyName", title: "Company Name", filterable: false },
+		                	{ field: "Country", width: 150, filterable: {multi: true}} 
+	                	]
 	            });
 	        });
 	    </script>
